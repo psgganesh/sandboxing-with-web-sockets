@@ -1,4 +1,5 @@
-# api-socket-social-network
+# aws-sample-sam-cli-api-websockets
+AWS sample SAM CLI template to demonstrate websockets and SAM CLI.
 
 ## Project setup
 ```
