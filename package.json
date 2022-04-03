@@ -1,7 +1,14 @@
 {
   "name": "api-socket-social-network",
   "version": "0.1.0",
+  "description": "AWS sample SAM CLI template with minimal HTML to demonstrate a sandboxed chat app",
   "private": true,
+  "author": {
+    "name": "Shankar Ganesh",
+    "email": "gnshnk@amazon.com",
+    "url": "https://phonetool.amazon.com/users/gnshnk"
+  },
+
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
