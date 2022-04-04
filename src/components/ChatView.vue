@@ -1,8 +1,12 @@
 <template>
-  <div class="flex-grow">
-    <div class="section">
-      <ol>
-        <li v-for="(item, index) in items" :key="index">
+  <div class="flex-grow bg-pattern">
+    <div class="section h-full">
+      <ol class="h-full flex flex-col justify-end align-bottom p-2">
+        <li
+          v-for="(item, index) in items"
+          :key="index"
+          class="rounded border-4 border-gray-100 bg-gray-50 p-2 my-2"
+        >
           {{ item.msg }}
         </li>
       </ol>
@@ -16,6 +20,7 @@
           class="focus:outline-none block w-full pl-2 sm:text-sm bg-gray-50"
           placeholder="Send your message ..."
           v-model="input"
+          @keydown.enter="send"
         />
       </div>
       <button
@@ -41,14 +46,13 @@ export default {
   data() {
     return {
       input: "",
-      msgs: "",
       items: [],
       socketConnection: null,
     };
   },
   mounted() {
-    console.log(process.env);
-    const that = this;
+    // Calling onconnect Lambda function via API endpoint
+    const instance = this;
     const connection = new WebSocket(
       process.env.VUE_APP_WEB_SOCKET_API_ENDPOINT
     );
@@ -65,8 +69,7 @@ export default {
       console.log("onmessage");
       console.dir(e);
       if (e && e.data) {
-        that.msgs = e.data;
-        that.items.unshift({ msg: e.data });
+        instance.items.push({ msg: e.data });
       }
     };
     connection.onclose = function () {
@@ -74,6 +77,7 @@ export default {
     };
   },
   methods: {
+    // Calling sendmessage Lambda function via API endpoint
     send: function () {
       this.socketConnection.send(
         JSON.stringify({
@@ -81,8 +85,10 @@ export default {
           data: this.input,
         })
       );
+      this.input = "";
     },
     disconnect: function () {
+      // Calling ondisconnect Lambda function via API endpoint
       this.socketConnection.disconnect();
     },
   },

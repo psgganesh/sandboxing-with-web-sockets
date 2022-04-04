@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-pattern {
+    background: url("@/assets/memphis-colorful.png");
+    background-size: repeat;
+}
+
+li:nth-child(odd) {
+    text-align: left;
+    background: rgb(255 251 235);
+}
+
+li:nth-child(even) {
+    text-align: right;
+    background: rgb(236 252 203);
+}
