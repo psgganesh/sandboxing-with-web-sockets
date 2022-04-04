@@ -36,6 +36,8 @@ To test the sendMessage function, send a JSON message like the following example
 
 ```sh
 wscat -c wss://{YOUR-API-ID}.execute-api.{YOUR-REGION}.amazonaws.com/prod
+connected (press CTRL+C to quit)
+> {"action":"sendmessage", "data":"hello world"}
 ```
 ---
 ## License Summary
