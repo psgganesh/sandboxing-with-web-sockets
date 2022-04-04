@@ -1,4 +1,4 @@
-# Sandboxing with api websockets 🔌 💬
+# Sandboxing with Web Sockets 🔌 💬
 AWS simple SAM CLI template & front-end project to demonstrate API Websockets and SAM CLI.
 
 > This project uses yarn as a package manager for quicker response times on CLI, you may feel free to replace the word `yarn` with `npm` if you want to !
