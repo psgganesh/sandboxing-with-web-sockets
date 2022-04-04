@@ -10,7 +10,8 @@
   },
   "scripts": {
     "setup": "cd sam && sam deploy --guided",
-    "start": "vue-cli-service serve"
+    "start": "vue-cli-service serve",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.8.3",
