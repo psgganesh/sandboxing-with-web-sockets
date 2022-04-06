@@ -1,5 +1,5 @@
 {
-  "name": "sandboxing-with-api-websockets",
+  "name": "sandboxing-with-web-sockets",
   "version": "0.1.0",
   "description": "AWS sample SAM CLI template with minimal HTML to demonstrate a sandboxed chat app",
   "private": true,
