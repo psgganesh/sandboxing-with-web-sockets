@@ -27,7 +27,13 @@ yarn start # OR npm run start
 
 ## Testing
 
+Running the websocket from CLI.
+```sh
+npm i -g wscat # Install wscat globally
+```
+
 On the console, connect to your published API endpoint by executing the following command:
+
 ```sh
 wscat -c wss://{YOUR-API-ID}.execute-api.{YOUR-REGION}.amazonaws.com/{STAGE}
 ```
