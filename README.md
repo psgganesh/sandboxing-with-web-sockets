@@ -10,7 +10,7 @@ Ensure you have node and npm installed on your system to run this project
 
 ## Installing yarn globally
 ```sh
-npm i -g yarn # Ignore if yarn is already installed
+npm i -g yarn
 ```
 ## Project setup
 ```sh
